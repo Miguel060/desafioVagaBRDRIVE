@@ -1,39 +1,57 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
-export async function GET() {
+export async function GET(req) {
   try {
-    const animais = await prisma.animal.findMany()
-    return Response.json(animais)
+    const { query } = req.url.split('?')[1]
+      ? Object.fromEntries(new URLSearchParams(req.url.split('?')[1]))
+      : {};
+
+    if (!query) {
+      return Response.json({ message: 'Parâmetro de busca (query) não fornecido' }, { status: 400 });
+    }
+
+    const animal = await prisma.animal.findFirst({
+      where: {
+        OR: [
+          { id: !isNaN(query) ? parseInt(query) : -1 }, // só parseia número se for válido
+          { nome: { contains: query, mode: 'insensitive' } },
+        ],
+      },
+    });
+
+    if (animal) {
+      return Response.json(animal, { status: 200 });
+    } else {
+      return Response.json({ message: 'Animal não encontrado' }, { status: 404 });
+    }
   } catch (err) {
-    return new Response('Erro ao buscar animais', { status: 500 })
+    console.error('Erro ao buscar animal:', err);
+    return Response.json({ message: 'Erro ao buscar animal' }, { status: 500 });
   }
 }
+
+
 
 export async function POST(request) {
-  try {
-    const body = await request.json();
-    const { nome, especie, descricao, imagemUrl } = body;
-
-    const novoAnimal = await prisma.animal.create({
-      data: {
-        nome,
-        especie,
-        descricao,
-        imagemUrl, // Corrigir o nome da variável para estar consistente com o frontend
-      },
-    });
-
-    // Retorna a resposta de sucesso com o novo animal criado
-    return new Response(JSON.stringify(novoAnimal), {
-      status: 201, // Código de sucesso de criação
-      headers: {
-        'Content-Type': 'application/json', // Certifique-se de retornar o tipo correto
-      },
-    });
-  } catch (err) {
-    console.error('Erro ao criar animal:', err);
-    return new Response('Erro ao criar animal', { status: 500 });
+    try {
+      const body = await request.json()
+      const { nome, especie, descricao, imagemUrl } = body
+  
+      const novoAnimal = await prisma.animal.create({
+        data: {
+          nome,
+          especie,
+          descricao,
+          imagemUrl
+        }
+      })
+  
+      return Response.json(novoAnimal)
+    } catch (err) {
+      console.error("Erro ao criar animal:", err)
+      return new Response('Erro ao criar animal', { status: 500 })
+    }
   }
-}
+  
