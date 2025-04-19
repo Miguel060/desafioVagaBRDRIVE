@@ -7,20 +7,20 @@ async function main() {
       {
         nome: "Leão",
         especie: "Mamífero",
-        descricao: "Rei da selva",
-        imagemUrl: "https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg"
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imagemUrl: "https://images.pexels.com/photos/4032590/pexels-photo-4032590.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         nome: "Papagaio",
         especie: "Ave",
-        descricao: "Ave colorida e falante",
-        imagemUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Papagaio-verde.jpg"
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imagemUrl: "https://images.pexels.com/photos/1004517/pexels-photo-1004517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       },
       {
         nome: "Tartaruga",
         especie: "Réptil",
-        descricao: "Lenta e resistente",
-        imagemUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Tartaruga-marinha.jpg"
+        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        imagemUrl: "https://images.pexels.com/photos/3487177/pexels-photo-3487177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       }
     ]
   });
