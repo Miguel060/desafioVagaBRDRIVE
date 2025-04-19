@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Animal {
+  id         Int    @id @default(autoincrement())
+  nome       String
+  especie    String
+  descricao  String?
+  imagemUrl  String?
+}
+

@@ -1,0 +1,11 @@
+.header{
+    background-color: #077A7D;
+    height: 4vh;
+}
+
+.navItem{
+    display: flex;
+    font-size: 20px;
+    float: right;
+    padding: 10px 15px;
+}
