@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 export default function Deletar() {
   const [animais, setAnimais] = useState([]);
   const [mensagemErro, setMensagemErro] = useState('');
+
   useEffect(() => {
     async function fetchAnimais() {
       try {
@@ -24,7 +25,11 @@ export default function Deletar() {
     fetchAnimais();
   }, []);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (id, nome) => {
+    const confirmacao = confirm(`Tem certeza que deseja deletar o animal "${nome}"?`);
+
+    if (!confirmacao) return; // Se o usuário cancelar, nada acontece
+
     try {
       const response = await fetch(`/api/zoologico/${id}`, {
         method: 'DELETE',
@@ -52,7 +57,7 @@ export default function Deletar() {
             <h2>{animal.nome}</h2>
             <p>{animal.descricao}</p>
             <img src={animal.imagemUrl} alt={animal.nome} style={{ width: '200px' }} />
-            <button onClick={() => handleDelete(animal.id)}>Deletar</button>
+            <button onClick={() => handleDelete(animal.id, animal.nome)}>Deletar</button>
           </div>
         ))
       ) : (
