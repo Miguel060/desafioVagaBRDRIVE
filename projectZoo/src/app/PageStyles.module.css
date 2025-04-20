@@ -196,10 +196,10 @@
 }
 
 .resultado img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 200px; 
 }
 
 .formContainer {
@@ -260,3 +260,83 @@
   .formContainer button:hover {
     background-color: #82b633;
   }
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .resultado {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .resultado img {
+      width: 80%; 
+      height: auto; 
+      max-height: 200px;
+      margin-bottom: 10px; 
+  }
+
+  .mainDivBusca {
+      width: 90%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 10rem; 
+      padding: 20px;
+  }
+
+  .input {
+      width: 100%;
+  }
+
+  .botao {
+      width: 100%;
+  }
+
+  .formContainer {
+      width: 100%;
+      margin-top: 10vh;
+      margin-left: 0;
+      padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resultado img {
+      width: 100%; 
+      height: auto;
+      max-height: 150px;
+  }
+
+  .mainDivBusca {
+      width: 100%; 
+      margin-top: 8rem;
+      margin-left: 0;
+  }
+
+  .input {
+      width: 100%;
+      font-size: 16px; 
+  }
+
+  .botao {
+      width: 100%;
+  }
+
+  .formContainer {
+      width: 100%; 
+      padding: 20px;
+      margin-top: 5vh;
+  }
+
+  .tituloBRzoo {
+      font-size: 2.5rem; 
+  }
+
+  .navItem {
+      font-size: 20px; 
+      padding: 8px 12px;
+  }
+}
