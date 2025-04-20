@@ -2,6 +2,15 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --verde: #9aca3e;
+  --verde-fundo: rgba(154, 202, 62, 0.9);
+  --bege: #F8EEDF;
+  --azul-escuro: #06202B;
+  --fonte-titulo: 'Bebas Neue', Helvetica, Arial, sans-serif;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

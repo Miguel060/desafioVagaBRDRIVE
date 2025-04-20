@@ -1,5 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Header from '../components/Header';
+import MenuLateral from '../components/MenuLateral';
 
 export default function Editar() {
   const [animais, setAnimais] = useState([]);
@@ -37,6 +39,8 @@ export default function Editar() {
 
   return (
     <div>
+      <Header/>
+      <MenuLateral/>
       <h1>Editar Animais</h1>
       {mensagem && <p>{mensagem}</p>}
       {animais.map(animal => (

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import  styles from '../PageStyles.module.css'
 
 export default function InsertAnimalForm() {
   const [nome, setNome] = useState('');
@@ -38,54 +39,57 @@ export default function InsertAnimalForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Formulário</h2>
-      <div>
-        <label htmlFor="nome">Nome:</label>
-        <input
-          type="text"
-          id="nome"
-          name="nome"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)} 
-          required
-        />
-      </div>
+    <div className={styles.formContainer}>
+      <form onSubmit={handleSubmit}>
+        <h2>Formulário</h2>
+        <div>
+          <label htmlFor="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            required
+          />
+        </div>
 
-      <div>
-        <label htmlFor="especie">Espécie:</label>
-        <input
-          type="text"
-          id="especie"
-          name="especie"
-          value={especie}
-          onChange={(e) => setEspecie(e.target.value)}
-          required
-        />
-      </div>
+        <div>
+          <label htmlFor="especie">Espécie:</label>
+          <input
+            type="text"
+            id="especie"
+            name="especie"
+            value={especie}
+            onChange={(e) => setEspecie(e.target.value)}
+            required
+          />
+        </div>
 
-      <div>
-        <label htmlFor="descricao">Descrição:</label>
-        <textarea
-          id="descricao"
-          name="descricao"
-          value={descricao}
-          onChange={(e) => setDescricao(e.target.value)} 
-        />
-      </div>
+        <div>
+          <label htmlFor="descricao">Descrição:</label>
+          <textarea
+            id="descricao"
+            name="descricao"
+            value={descricao}
+            onChange={(e) => setDescricao(e.target.value)}
+          />
+        </div>
 
-      <div>
-        <label htmlFor="imagemUrl">URL da Imagem:</label>
-        <input
-          type="url"
-          id="imagemUrl"
-          name="imagemUrl"
-          value={imagemUrl}
-          onChange={(e) => setImagemUrl(e.target.value)}
-        />
-      </div>
+        <div>
+          <label htmlFor="imagemUrl">URL da Imagem:</label>
+          <input
+            type="url"
+            id="imagemUrl"
+            name="imagemUrl"
+            value={imagemUrl}
+            onChange={(e) => setImagemUrl(e.target.value)}
+          />
+        </div>
 
-      <button type="submit">Cadastrar</button>
-    </form>
+        <button type="submit">Cadastrar</button>
+      </form>
+
+    </div>
   );
 }

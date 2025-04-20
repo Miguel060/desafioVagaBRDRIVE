@@ -1,5 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
+import MenuLateral from '../components/MenuLateral';
+import Header from '../components/Header';
 
 export default function Deletar() {
   const [animais, setAnimais] = useState([]);
@@ -48,6 +50,8 @@ export default function Deletar() {
 
   return (
     <div>
+      <Header/>
+      <MenuLateral/>
       <h1>Lista de Animais</h1>
       {mensagemErro && <p style={{ color: 'red' }}>{mensagemErro}</p>}
       

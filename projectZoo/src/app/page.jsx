@@ -1,97 +1,65 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Header from "@/app/components/Header";
+'use client'
+import { useState } from "react";
+import styles from "../app/PageStyles.module.css"
+import Header from "../app/components/Header";
+import Link from "next/link"; 
+import MenuLateral from "./components/MenuLateral";
+export default function Buscar() {
+  const [query, setQuery] = useState("");
+  const [animal, setAnimal] = useState(null);
+  const [mensagemErro, setMensagemErro] = useState("");
 
-export default function Home() {
+  const handleSearch = async () => {
+    setMensagemErro("");
+    setAnimal(null);
+
+    try {
+      const response = await fetch(`/api/zoologico?query=${query}`);
+      const data = await response.json();
+
+      if (!response.ok) {
+        setMensagemErro(data.message);
+      } else {
+        setAnimal(data);
+      }
+    } catch (error) {
+      setMensagemErro("Erro inesperado na busca");
+      console.error("Erro ao buscar animal", error);
+    }
+  };
+
   return (
-    <div className={styles.page}>
-      <Header/>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing<code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div>
+      <Header />
+      <div className={styles.container}>
+        <div className={styles.mainDivBusca}>
+          <h1 className={styles.font_}>Busca</h1>
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Digite o nome ou ID do animal"
+            className={styles.input}
+          />
+          <button onClick={handleSearch} className={styles.botao}>
+            Buscar
+          </button>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {mensagemErro && <p className={styles.erro}>{mensagemErro}</p>}
+
+        <div className={styles.mainDivAnimal}>
+          {animal && (
+            <div className={styles.resultado}>
+              <h2>{animal.nome}</h2>
+              <p>{animal.descricao}</p>
+              <img src={animal.imagemUrl} alt={`Imagem de ${animal.nome}`} />
+            </div>
+          )}
+        </div>
+      </div>
+      <MenuLateral/>
+
     </div>
   );
 }
