@@ -15,7 +15,7 @@
     color: #F8EEDF;
     font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 2px;
-    font-size: 4vh;
+    font-size: 3.5rem;
 }
 
 .nav {
@@ -34,18 +34,18 @@
 
 .mainDivBusca {
     display: flex;
-    background-color: rgba(154, 202, 62, 0.8);
+    background-color: #9aca3e;
     border-radius: 20px;
-    height: 30vh;
-    width: 30vh;
+    height: 25rem;
+    width: 25rem;
     position: relative;
     float: left;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30vh;
-    margin-left: 20vh;
-    box-shadow: -13px 10px 0px #F8EEDF;
+    margin-top: 20rem;
+    margin-left: 20rem;
+    box-shadow: -10px 3px 0px #F8EEDF;
     overflow: visible;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .font_ {
-    font-size: 5vh;
+    font-size: 5rem;
     font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 4px;
     color: #F8EEDF;
@@ -134,19 +134,20 @@
 }
 
 .menuContainer {
-    position: fixed;
-    top: 10vh;
-    right: 0;
-    height: 90vh;
-    width: 20vh;
-    background-color: #F8EEDF;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-  }
+  position: fixed;
+  top: 6rem;
+  right: 0;
+  height: calc(100% - 6rem);
+  width: 15rem;
+  background-color: #F8EEDF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+
   
   .menuList {
     list-style: none;
@@ -155,25 +156,30 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-top: 3rem;
+    gap: 2rem; 
+    align-items: center;
   }
   
   .menuItem {
     font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
     font-size: 30px;
     background-color:rgba(154, 202, 62, 0.8);
-    height: 5vh;
-    width: 10vh;
+    display: flex;
+    height: 5rem;
+    width: 10rem;
     align-items: center;
     text-align: center;
     justify-content: center;
     border-radius: 6px;
-    color: #F8EEDF;
+    color: #06202B;
     cursor: pointer;
+    margin-bottom: 5rem;
     transition: color 0.3s;
   }
   
   .menuItem:hover {
-    color:  #06202B;
+    color:  #F8EEDF;
   }
   
 
