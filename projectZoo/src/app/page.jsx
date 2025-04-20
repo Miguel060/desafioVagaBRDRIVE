@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "../app/PageStyles.module.css"
 import Header from "../app/components/Header";
-import Link from "next/link"; 
+import Link from "next/link";
 import MenuLateral from "./components/MenuLateral";
 export default function Buscar() {
   const [query, setQuery] = useState("");
@@ -52,19 +52,19 @@ export default function Buscar() {
           {animal && (
             <div className={styles.resultado}>
               <h2>{animal.nome}</h2>
-              <p className={styles.descricaoAnimal}>{animal.descricao}</p>
               {animal.imagemUrl && (
-                <img 
-                  src={animal.imagemUrl} 
-                  alt={`Imagem de ${animal.nome}`} 
+                <img
+                  src={animal.imagemUrl}
+                  alt={`Imagem de ${animal.nome}`}
                   className={styles.imagemAnimal}
                 />
               )}
+              <p className={styles.descricaoAnimal}>{animal.descricao}</p>
             </div>
           )}
         </div>
       </div>
-      <MenuLateral/>
+      <MenuLateral />
     </div>
   );
 }
