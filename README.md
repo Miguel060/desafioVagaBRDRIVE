@@ -78,7 +78,7 @@ DATABASE_URL="postgresql://postgres:123456@localhost:5432/zoologico"
     npm run seed
      ```
 
- 4. **Instale as dependências** na pasta /projectZoo
+ 8. ## Instale as dependências na pasta /projectZoo
     ```bash
      npm install
 
