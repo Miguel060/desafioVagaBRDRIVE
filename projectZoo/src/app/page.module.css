@@ -145,9 +145,8 @@ a.secondary {
   }
 
   .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+    min-width: 150px; 
+    font-size: 1rem; 
   }
 
   a.secondary {

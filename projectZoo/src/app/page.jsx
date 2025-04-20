@@ -59,7 +59,6 @@ export default function Buscar() {
         </div>
       </div>
       <MenuLateral/>
-
     </div>
   );
 }
