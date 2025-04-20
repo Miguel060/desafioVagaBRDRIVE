@@ -1,136 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .header {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: space-between;
-    height: 10vh;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
 }
 
-.tituloBRzoo{
-    display: flex;
-    text-align: center;
-    padding: 30px 20px 2px 9px;
-    color: #F8EEDF;
-    font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: 2px;
-    font-size: 3.5rem;
+.tituloBRzoo {
+  display: flex;
+  text-align: center;
+  padding: 30px 20px 2px 9px;
+  color: #F8EEDF;
+  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  font-size: 3.5rem;
 }
 
 .nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .container {
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .mainDivBusca {
-    display: flex;
-    background-color: #9aca3e;
-    border-radius: 20px;
-    height: 25rem;
-    width: 25rem;
-    position: relative;
-    float: left;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20rem;
-    margin-left: 20rem;
-    box-shadow: -10px 3px 0px #F8EEDF;
-    overflow: visible;
+  display: flex;
+  background-color: #9aca3e;
+  border-radius: 20px;
+  height: 25rem;
+  width: 25rem;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rem;
+  margin-left: 20rem;
+  box-shadow: -10px 3px 0px #F8EEDF;
+  overflow: visible;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5rem;
 }
+
 
 
 .mainDivAnimal {
-    display: flex;
-    margin-top: 22vh;
-    margin-right: 25vh;
-    margin-left: 25vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  margin-top: 22vh;
+  margin-right: 25vh;
+  margin-left: 25vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .navList {
-    display: flex;
-    font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
-    list-style: none;
-    letter-spacing: 1px;
-    margin: 0;
-    padding: 0 20px;
-    width: 100%;
-    justify-content: flex-end;
-    color: #F8EEDF;
+  display: flex;
+  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+  list-style: none;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  justify-content: flex-end;
+  color: #F8EEDF;
 }
 
 .font_ {
-    font-size: 5rem;
-    font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: 4px;
-    color: #F8EEDF;
-    margin-bottom: 20px;
+  font-size: 5rem;
+  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 4px;
+  color: #F8EEDF;
+  margin-bottom: 20px;
 }
 
 .navItem {
-    font-size: 30px;
-    padding: 10px 15px;
-    background-color: #9aca3e;
-    border-radius: 10px;
+  font-size: 30px;
+  padding: 10px 15px;
+  background-color: #9aca3e;
+  border-radius: 10px;
 }
 
 .iconContainer {
-    display: flex;
+  display: flex;
 }
 
 .titulo {
-    font-size: 36px;
-    font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
-    margin: 20px 0;
-    letter-spacing: 1px;
+  font-size: 36px;
+  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+  margin: 20px 0;
+  letter-spacing: 1px;
 }
 
 .searchArea {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
 .input {
-    padding: 12px 16px;
-    font-size: 18px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: #06202B;
-    width: 290px;
+  padding: 12px 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #06202B;
+  width: 290px;
 }
 
 .botao {
-    padding: 12px 24px;
-    margin-top: 20px;
-    font-size: 18px;
-    font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    background-color: #06202B;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  background-color: #06202B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .botao:hover {
-    background-color: #005dc1;
+  background-color: #005dc1;
 }
 
 .menuContainer {
@@ -147,196 +150,137 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 768px) {
+  .menuContainer {
+    width: 50%;
+  }
+}
 
-  
-  .menuList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-top: 3rem;
-    gap: 2rem; 
-    align-items: center;
-  }
-  
-  .menuItem {
-    font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    background-color:rgba(154, 202, 62, 0.8);
-    display: flex;
-    height: 5rem;
-    width: 10rem;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 6px;
-    color: #06202B;
-    cursor: pointer;
-    margin-bottom: 5rem;
-    transition: color 0.3s;
-  }
-  
-  .menuItem:hover {
-    color:  #F8EEDF;
-  }
-  
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 3rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menuItem {
+  font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  background-color: rgba(154, 202, 62, 0.8);
+  display: flex;
+  height: 5rem;
+  width: 10rem;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #06202B;
+  cursor: pointer;
+  margin-bottom: 5rem;
+  transition: color 0.3s;
+}
+
+.menuItem:hover {
+  color: #F8EEDF;
+}
+
 
 .erro {
-    color: red;
-    font-size: 16px;
-    margin-top: 10px;
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .resultado {
-    margin-top: 20px;
-    max-width: 600px;
-    text-align: center;
+  margin-top: 20px;
+  max-width: 600px;
+  text-align: center;
 }
 
 .resultado img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  max-height: 200px; 
+  max-height: 200px;
 }
 
 .formContainer {
-    background-color: rgba(154, 202, 62, 0.9);
-    border-radius: 20px;
-    padding: 30px;
-    width: 35vh;
-    height: auto;
-    position: absolute;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20vh;
-    margin-left: 10vh;
-    box-shadow: -13px 10px 0px #F8EEDF;
-    z-index: 2;
-  }
-  
-  .formContainer h2 {
-    color: #06202B;
-    font-family: 'Bebas Neue', Helvetica, sans-serif;
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .formContainer label {
-    color: #06202B;
-    font-weight: bold;
-    margin-bottom: 4px;
-    display: block;
-  }
-  
-  .formContainer input,
-  .formContainer textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #fff;
-    color: #06202B;
-    resize: vertical;
-  }
-  
-  .formContainer button {
-    background-color: #9aca3e;
-    color: #06202B;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .formContainer button:hover {
-    background-color: #82b633;
-  }
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  .resultado {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-  }
-
-  .resultado img {
-      width: 80%; 
-      height: auto; 
-      max-height: 200px;
-      margin-bottom: 10px; 
-  }
-
-  .mainDivBusca {
-      width: 90%;
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 10rem; 
-      padding: 20px;
-  }
-
-  .input {
-      width: 100%;
-  }
-
-  .botao {
-      width: 100%;
-  }
-
-  .formContainer {
-      width: 100%;
-      margin-top: 10vh;
-      margin-left: 0;
-      padding: 20px;
-  }
+  background-color: rgba(154, 202, 62, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  width: 35vh;
+  height: auto;
+  position: absolute;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20vh;
+  margin-left: 10vh;
+  box-shadow: -13px 10px 0px #F8EEDF;
+  z-index: 2;
 }
 
-@media screen and (max-width: 480px) {
-  .resultado img {
-      width: 100%; 
-      height: auto;
-      max-height: 150px;
-  }
+.formContainer h2 {
+  color: #06202B;
+  font-family: 'Bebas Neue', Helvetica, sans-serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
-  .mainDivBusca {
-      width: 100%; 
-      margin-top: 8rem;
-      margin-left: 0;
-  }
+.formContainer label {
+  color: #06202B;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
 
-  .input {
-      width: 100%;
-      font-size: 16px; 
-  }
+.formContainer input,
+.formContainer textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #06202B;
+  resize: vertical;
+}
 
-  .botao {
-      width: 100%;
-  }
+.formContainer button {
+  background-color: #9aca3e;
+  color: #06202B;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  .formContainer {
-      width: 100%; 
-      padding: 20px;
-      margin-top: 5vh;
-  }
+.formContainer button:hover {
+  background-color: #82b633;
+}
 
+
+@media screen and (max-width: 1366px) {
   .tituloBRzoo {
-      font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
-
-  .navItem {
-      font-size: 20px; 
-      padding: 8px 12px;
+  
+  .mainDivBusca {
+    margin-top: 8rem;
+  }
+  
+  .formContainer {
+    width: 90%;
+    margin: 15vh auto; 
   }
 }
