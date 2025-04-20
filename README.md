@@ -81,9 +81,10 @@ DATABASE_URL="postgresql://postgres:123456@localhost:5432/zoologico"
      ```bash
     npm run seed
 
-9. ## Rodando o projeto. Obs: entre na pasta do projeto /rojectZoo
+9. ## Rodando o projeto. Obs: entre na pasta do projeto /projectZoo
     ```bash
     npm run dev
     ```
-10. ## Acesse o navegador com http://localhost:<porta que está rodando seu projeto> ex: https://localhost:3000
+10. ## Acesse o navegador com http://localhost:<porta que está rodando seu projeto>
+     ex: https://localhost:3000
 
