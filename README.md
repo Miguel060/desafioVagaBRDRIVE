@@ -75,10 +75,15 @@ DATABASE_URL="postgresql://postgres:123456@localhost:5432/zoologico"
   Esse comando:
     Cria uma nova migração com o nome init;
     Aplica a migração ao banco de dados;
-    era o Prisma Client novamente (automaticamente).
+    Gera o Prisma Client novamente (automaticamente).
     
 8. ## Inserindo dados automáticamente no banco:
      ```bash
     npm run seed
 
+9. ## Rodando o projeto. Obs: entre na pasta do projeto /rojectZoo
+    ```bash
+    npm run dev
+    ```
+10. ## Acesse o navegador com http://localhost:<porta que está rodando seu projeto> ex: https://localhost:3000
 
