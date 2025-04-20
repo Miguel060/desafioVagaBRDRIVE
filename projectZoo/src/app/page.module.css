@@ -146,8 +146,9 @@ a.secondary {
 
   .ctas a {
     min-width: 150px; 
-    font-size: 1rem; 
+    font-size: 1rem;
   }
+  
 
   a.secondary {
     min-width: auto;

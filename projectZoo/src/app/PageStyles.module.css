@@ -33,34 +33,50 @@
 }
 
 .mainDivBusca {
-  display: flex;
   background-color: #9aca3e;
   border-radius: 20px;
-  height: 25rem;
-  width: 25rem;
+  height: auto;
+  /* Altura flexível */
+  width: 70%;
+  /* Largura reduzida */
+  padding: 2rem;
+  /* Espaçamento interno */
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20rem;
-  margin-left: 20rem;
+  margin: 5rem auto;
+  /* Centralizado */
   box-shadow: -10px 3px 0px #F8EEDF;
-  overflow: visible;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 5rem;
+  max-width: 600px;
+  /* Largura máxima */
 }
-
-
 
 .mainDivAnimal {
   display: flex;
-  margin-top: 22vh;
-  margin-right: 25vh;
-  margin-left: 25vh;
+  margin: 5vh 18vh 5vh 5vh;
+  /* Mais espaço à direita */
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  /* Alinhar à esquerda */
+}
+
+.descricaoAnimal {
+  max-width: 70ch;
+  /* Limita a largura em cerca de 70 caracteres */
+  line-height: 1.6;
+  text-align: left;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  white-space: pre-line;
+  /* Mantém quebras de linha do banco de dados */
+  word-wrap: break-word;
+  hyphens: auto;
+  /* Hifenização automática */
+  color: #333;
+  background-color: rgba(248, 238, 223, 0.3);
+  border-radius: 8px;
 }
 
 .navList {
@@ -107,6 +123,8 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
+  width: 100%;
+  /* Ocupa toda largura */
 }
 
 .input {
@@ -115,7 +133,10 @@
   border-radius: 8px;
   border: 1px solid #ccc;
   background-color: #06202B;
-  width: 290px;
+  width: 100%;
+  /* Ocupa toda largura disponível */
+  max-width: 400px;
+  /* Mas não ultrapassa isso */
 }
 
 .botao {
@@ -198,16 +219,30 @@
 }
 
 .resultado {
-  margin-top: 20px;
-  max-width: 600px;
-  text-align: center;
+  max-width: 800px;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.resultado h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #06202B;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+  padding-left: 0;
 }
 
 .resultado img {
   max-width: 100%;
-  height: auto;
+  max-height: 400px;
   border-radius: 10px;
-  max-height: 200px;
+  margin-top: 1rem;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .formContainer {
@@ -274,13 +309,59 @@
   .tituloBRzoo {
     font-size: 2.5rem;
   }
-  
+
   .mainDivBusca {
     margin-top: 8rem;
   }
-  
+
   .formContainer {
     width: 90%;
-    margin: 15vh auto; 
+    margin: 15vh auto;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .mainDivBusca {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  .mainDivAnimal {
+    margin: 5vh 5vh;
+  }
+
+
+  @media (max-width: 768px) {
+    .descricaoAnimal {
+      max-width: 95%;
+      font-size: 1rem;
+    }
+
+    .resultado img {
+      max-height: 300px;
+    }
+  }
+
+  .mainDivAnimal {
+    margin-left: 5vh;
+    /* Reduzi de 10vh para 5vh */
+    margin-right: 10vh;
+  }
+
+  .resultado {
+    margin-left: 0;
+    /* Remove margem esquerda extra */
+    padding-left: 1rem;
+    /* Adiciona um pequeno espaço interno */
+    width: 95%;
+    /* Ocupa quase toda a largura disponível */
+  }
+
+  .resultado img {
+    margin-left: 0;
+    /* Remove a margem esquerda da imagem */
+    align-self: flex-start;
+    /* Alinha a imagem à esquerda */
+  }
+
 }

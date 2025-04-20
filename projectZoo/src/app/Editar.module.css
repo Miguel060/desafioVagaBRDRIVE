@@ -1,0 +1,196 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #06202B;
+  }
+  
+  .mainContent {
+    margin-left: 15rem; /* Ajuste conforme largura do MenuLateral */
+    padding: 2rem;
+  }
+  
+  .tituloPagina {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #06202B;
+    margin-bottom: 2rem;
+  }
+  
+  .listaAnimais {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .cardAnimal {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .cardAnimal:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .animalImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .animalNome {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #06202B;
+    margin: 0.5rem 0;
+  }
+  
+  .botaoEditar {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #9aca3e;
+    color: white;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .botaoEditar:hover {
+    background-color: #82b633;
+  }
+  
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .formEdicao {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #06202B;
+  }
+  
+  .formInput, .formTextarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .formTextarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .imagemPreview {
+    margin-top: 1rem;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 6px;
+  }
+  
+  .botoesContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .botaoSalvar {
+    padding: 0.75rem 1.5rem;
+    background-color: #06202B;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .botaoSalvar:hover {
+    background-color: #005dc1;
+  }
+  
+  .botaoCancelar {
+    padding: 0.75rem 1.5rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .botaoCancelar:hover {
+    background-color: #d32f2f;
+  }
+  
+  .mensagem {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  .sucesso {
+    background-color: #dff0d8;
+    color: #3c763d;
+  }
+  
+  .erro {
+    background-color: #f2dede;
+    color: #a94442;
+  }
+  
+  @media (max-width: 768px) {
+    .mainContent {
+      margin-left: 0;
+      padding: 1rem;
+    }
+    
+    .listaAnimais {
+      grid-template-columns: 1fr;
+    }
+    
+    .formEdicao {
+      width: 95%;
+      padding: 1rem;
+    }
+  }

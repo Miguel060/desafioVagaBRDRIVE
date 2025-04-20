@@ -52,8 +52,14 @@ export default function Buscar() {
           {animal && (
             <div className={styles.resultado}>
               <h2>{animal.nome}</h2>
-              <p>{animal.descricao}</p>
-              <img src={animal.imagemUrl} alt={`Imagem de ${animal.nome}`} />
+              <p className={styles.descricaoAnimal}>{animal.descricao}</p>
+              {animal.imagemUrl && (
+                <img 
+                  src={animal.imagemUrl} 
+                  alt={`Imagem de ${animal.nome}`} 
+                  className={styles.imagemAnimal}
+                />
+              )}
             </div>
           )}
         </div>
