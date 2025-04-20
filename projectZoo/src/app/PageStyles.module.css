@@ -33,47 +33,36 @@
 }
 
 .mainDivBusca {
-  background-color: #9aca3e;
+  background-color: #F8EEDF;
   border-radius: 20px;
   height: auto;
-  /* Altura flexível */
   width: 70%;
-  /* Largura reduzida */
   padding: 2rem;
-  /* Espaçamento interno */
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 5rem auto;
-  /* Centralizado */
-  box-shadow: -10px 3px 0px #F8EEDF;
   max-width: 600px;
-  /* Largura máxima */
 }
 
 .mainDivAnimal {
   display: flex;
   margin: 5vh 18vh 5vh 5vh;
-  /* Mais espaço à direita */
   flex-direction: column;
   align-items: flex-start;
-  /* Alinhar à esquerda */
 }
 
 .descricaoAnimal {
   max-width: 70ch;
-  /* Limita a largura em cerca de 70 caracteres */
   line-height: 1.6;
   text-align: left;
   font-size: 1.1rem;
   margin: 1rem 0;
   padding: 0.5rem;
   white-space: pre-line;
-  /* Mantém quebras de linha do banco de dados */
   word-wrap: break-word;
   hyphens: auto;
-  /* Hifenização automática */
   color: #333;
   background-color: rgba(248, 238, 223, 0.3);
   border-radius: 8px;
@@ -95,7 +84,7 @@
   font-size: 5rem;
   font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 4px;
-  color: #F8EEDF;
+  color: #06202B;
   margin-bottom: 20px;
 }
 
@@ -124,7 +113,6 @@
   gap: 10px;
   margin-bottom: 30px;
   width: 100%;
-  /* Ocupa toda largura */
 }
 
 .input {
@@ -132,11 +120,9 @@
   font-size: 18px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  background-color: #06202B;
+  background-color: #82b633;
   width: 100%;
-  /* Ocupa toda largura disponível */
   max-width: 400px;
-  /* Mas não ultrapassa isso */
 }
 
 .botao {
@@ -145,7 +131,7 @@
   font-size: 18px;
   font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
-  background-color: #06202B;
+  background-color: #82b633;
   color: white;
   border: none;
   border-radius: 8px;
@@ -246,7 +232,7 @@
 }
 
 .formContainer {
-  background-color: rgba(154, 202, 62, 0.9);
+  background-color: #F8EEDF;
   border-radius: 20px;
   padding: 30px;
   width: 35vh;
@@ -258,7 +244,6 @@
   gap: 20px;
   margin-top: 20vh;
   margin-left: 10vh;
-  box-shadow: -13px 10px 0px #F8EEDF;
   z-index: 2;
 }
 
@@ -282,6 +267,7 @@
   width: 100%;
   padding: 10px;
   border-radius: 8px;
+  border: none;
   font-size: 16px;
   background-color: #fff;
   color: #06202B;
@@ -290,7 +276,7 @@
 
 .formContainer button {
   background-color: #9aca3e;
-  color: #06202B;
+  color: white;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -344,24 +330,24 @@
 
   .mainDivAnimal {
     margin-left: 5vh;
-    /* Reduzi de 10vh para 5vh */
+
     margin-right: 10vh;
   }
 
   .resultado {
     margin-left: 0;
-    /* Remove margem esquerda extra */
+
     padding-left: 1rem;
-    /* Adiciona um pequeno espaço interno */
+
     width: 95%;
-    /* Ocupa quase toda a largura disponível */
+
   }
 
   .resultado img {
     margin-left: 0;
-    /* Remove a margem esquerda da imagem */
+ 
     align-self: flex-start;
-    /* Alinha a imagem à esquerda */
+
   }
 
 }

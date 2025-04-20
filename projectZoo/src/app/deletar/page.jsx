@@ -1,11 +1,12 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
 import MenuLateral from '../components/MenuLateral';
 import Header from '../components/Header';
+import styles from '../Editar.module.css';
 
 export default function Deletar() {
   const [animais, setAnimais] = useState([]);
-  const [mensagemErro, setMensagemErro] = useState('');
+  const [mensagem, setMensagem] = useState('');
 
   useEffect(() => {
     async function fetchAnimais() {
@@ -16,11 +17,11 @@ export default function Deletar() {
         if (Array.isArray(data)) {
           setAnimais(data);
         } else {
-          setMensagemErro('Erro ao carregar animais');
+          setMensagem('Erro ao carregar animais');
         }
       } catch (error) {
         console.error('Erro ao buscar animais:', error);
-        setMensagemErro('Erro ao buscar animais');
+        setMensagem('Erro ao buscar animais');
       }
     }
 
@@ -29,8 +30,7 @@ export default function Deletar() {
 
   const handleDelete = async (id, nome) => {
     const confirmacao = confirm(`Tem certeza que deseja deletar o animal "${nome}"?`);
-
-    if (!confirmacao) return; // Se o usuário cancelar, nada acontece
+    if (!confirmacao) return;
 
     try {
       const response = await fetch(`/api/zoologico/${id}`, {
@@ -39,34 +39,58 @@ export default function Deletar() {
 
       if (response.ok) {
         setAnimais(animais.filter(animal => animal.id !== id));
+        setMensagem(`Animal "${nome}" deletado com sucesso!`);
+        setTimeout(() => setMensagem(''), 3000);
       } else {
-        setMensagemErro('Erro ao deletar animal');
+        setMensagem('Erro ao deletar animal');
       }
     } catch (error) {
       console.error('Erro ao deletar animal:', error);
-      setMensagemErro('Erro ao deletar animal');
+      setMensagem('Erro ao deletar animal');
     }
   };
 
   return (
-    <div>
-      <Header/>
-      <MenuLateral/>
-      <h1>Lista de Animais</h1>
-      {mensagemErro && <p style={{ color: 'red' }}>{mensagemErro}</p>}
-      
-      {animais.length > 0 ? (
-        animais.map((animal) => (
-          <div key={animal.id}>
-            <h2>{animal.nome}</h2>
-            <p>{animal.descricao}</p>
-            <img src={animal.imagemUrl} alt={animal.nome} style={{ width: '200px' }} />
-            <button onClick={() => handleDelete(animal.id, animal.nome)}>Deletar</button>
+    <div className={styles.container}>
+      <Header />
+      <MenuLateral />
+
+      <main className={styles.mainContent}>
+        <h1 className={styles.tituloPagina}>Deletar Animais</h1>
+
+        {mensagem && (
+          <div className={`${styles.mensagem} ${mensagem.includes('sucesso') ? styles.sucesso : styles.erro}`}>
+            {mensagem}
           </div>
-        ))
-      ) : (
-        <p>Nenhum animal encontrado.</p>
-      )}
+        )}
+
+        <div className={styles.listaAnimais}>
+          {animais.length > 0 ? (
+            animais.map((animal) => (
+              <div key={animal.id} className={styles.cardAnimal}>
+                <div className={styles.cardContent}>
+                  {animal.imagemUrl && (
+                    <img
+                      src={animal.imagemUrl}
+                      alt={animal.nome}
+                      className={styles.animalImage}
+                    />
+                  )}
+                  <h2 className={styles.animalNome}>{animal.nome}</h2>
+                </div>
+                <button
+                  onClick={() => handleDelete(animal.id, animal.nome)}
+                  className={styles.botaoCancelar}
+                >
+                  Deletar
+                </button>
+              </div>
+            ))
+          ) : (
+            <p className={styles.erro}>Nenhum animal encontrado.</p>
+          )}
+        </div>
+      </main>
     </div>
   );
 }
