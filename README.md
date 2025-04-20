@@ -34,11 +34,7 @@ Este projeto foi desenvolvido como parte do processo seletivo da empresa **BRDri
 
 3. **Clonar o repositório** https://github.com/Miguel060/desafioVagaBRDRIVE.git 
 
-4. **Instale as dependências** na pasta raiz do projeto 
-   ```bash
-   npm install
-
-5. ## Configurar o Banco de Dados
+4. ## Configurar o Banco de Dados
   Este projeto utiliza **PostgreSQL** como banco de dados e **Prisma** como ORM para facilitar a comunicação com ele.
 
 Crie um banco de dados PostgreSQL local com o nome zoologico:
@@ -49,7 +45,7 @@ Crie um banco de dados PostgreSQL local com o nome zoologico:
 
 ---
 
-### Criando o arquivo `.env`
+### Criando o arquivo `.env` (sem nome, apenas .env)
 
 Na raiz do projeto, crie um arquivo chamado `.env` e adicione a seguinte variável de ambiente:
 
@@ -60,14 +56,14 @@ Substitua os campos conforme seu banco real. Ex:
 ```env
 DATABASE_URL="postgresql://postgres:123456@localhost:5432/zoologico"
 ```
- 6. ## Gerando o Prisma Client
+ 5. ## Gerando o Prisma Client
     Após configurar a variável de ambiente com a URL do banco de dados, você deve gerar o Prisma Client com o seguinte comando:
     ```bash
     npx prisma generate
     ```
     Isso criará o cliente que será utilizado para acessar o banco de dados de forma tipada dentro do projeto.
 
-7. ## Rodando as migrações
+6. ## Rodando as migrações
     Para criar as tabelas no banco de dados com base no schema do Prisma, utilize:
     ```bash
       npx prisma migrate dev --name init
@@ -77,9 +73,14 @@ DATABASE_URL="postgresql://postgres:123456@localhost:5432/zoologico"
     Aplica a migração ao banco de dados;
     Gera o Prisma Client novamente (automaticamente).
     
-8. ## Inserindo dados automáticamente no banco:
+7. ## Inserindo dados automáticamente no banco: (pasta raiz do projeto projetoBRDRIVE)
      ```bash
     npm run seed
+     ```
+
+ 4. **Instale as dependências** na pasta /projectZoo
+    ```bash
+     npm install
 
 9. ## Rodando o projeto. Obs: entre na pasta do projeto /projectZoo
     ```bash
